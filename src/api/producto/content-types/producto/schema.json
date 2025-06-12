@@ -1,0 +1,120 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Producto",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombreProducto": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombreProducto"
+    },
+    "imagenProducto": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "productoActivo": {
+      "type": "boolean",
+      "default": false
+    },
+    "precioProducto": {
+      "type": "decimal"
+    },
+    "stockProducto": {
+      "type": "integer"
+    },
+    "fechaCreacionProducto": {
+      "type": "date"
+    },
+    "marcaProducto": {
+      "type": "string"
+    },
+    "productoDestacado": {
+      "type": "boolean",
+      "default": false
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria"
+    },
+    "edadProducto": {
+      "type": "enumeration",
+      "enum": [
+        "Edad: 1-3",
+        "Edad: 3-6",
+        "Edad: 6-10",
+        "Edad: 10-15",
+        "Edad: +15"
+      ]
+    },
+    "tipoPeluche": {
+      "type": "enumeration",
+      "enum": [
+        "Fantasía",
+        "Animales",
+        "Personajes "
+      ]
+    },
+    "numPiezasPuzzle": {
+      "type": "enumeration",
+      "enum": [
+        "piezas: 500",
+        "piezas: 700",
+        "piezas: 1000"
+      ]
+    },
+    "numeroPiezasLego": {
+      "type": "enumeration",
+      "enum": [
+        "Piezas:500",
+        "Piezas:1000",
+        "Piezas:1500"
+      ]
+    },
+    "descripcionProducto": {
+      "type": "string"
+    },
+    "tipoVehiculo": {
+      "type": "enumeration",
+      "enum": [
+        "Rally",
+        "Drift",
+        "Monster Truck"
+      ]
+    },
+    "tipoJuegoMesa": {
+      "type": "enumeration",
+      "enum": [
+        "Estrategia",
+        "Infantil",
+        "Cartas"
+      ]
+    },
+    "tipoLibro": {
+      "type": "enumeration",
+      "enum": [
+        "Manga",
+        "Novela",
+        "Infantil"
+      ]
+    }
+  }
+}

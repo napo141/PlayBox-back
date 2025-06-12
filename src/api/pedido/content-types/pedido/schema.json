@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "singularName": "pedido",
+    "pluralName": "pedidos",
+    "displayName": "Pedido"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "stripeId": {
+      "type": "string"
+    },
+    "productos": {
+      "type": "json"
+    }
+  }
+}
